@@ -78,12 +78,8 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blog',
-        'USER':'root',
-        'PASSWORD':'mysql',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -125,7 +121,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-   BASE_DIR / "/blog/static/blog/"
+    BASE_DIR / "blog/static/blog"
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
